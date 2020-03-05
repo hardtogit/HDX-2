@@ -1,0 +1,42 @@
+@import '/page/common/common.wxss';
+page{
+  background: #eeeeee;
+}
+.orders-list{
+    background: #ffffff;
+    padding-left: 20rpx;
+}
+.orders-detail{
+    position: relative;
+    height: 150rpx;
+    padding: 10rpx 20rpx 35rpx 170rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+    background: #ffffff;
+}
+.orders-detail image{
+    position: absolute;
+    left: 0;
+    top: 20rpx;
+    width: 150rpx;
+    height: 150rpx;
+}
+.orders-detail view{
+    line-height: 60rpx;
+}
+.orders-detail .orders-status{
+    position: absolute;
+    right: 20rpx;
+    top: 35rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    font-size: 40rpx;
+}
+.goods-name{
+  width: 510rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-top: 30rpx;
+}

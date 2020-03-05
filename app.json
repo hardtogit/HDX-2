@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "page/index",
+    "page/login/index",
+    "page/user/user",
+    "page/user/info",
+    "page/user/ask",
+    "page/activity/activity",
+    "page/detail/detail",
+    "page/detail/info",
+    "page/detail/discuss",
+    "page/activity/search",
+    "page/activity/searchlist",
+    "page/firm/firm",
+    "page/firm/list",
+    "page/orders/orders0",
+    "page/orders/billinfo",
+    "page/keep/list",
+    "page/organizer/list",
+    "page/rl/index",
+    "page/detail/accounts",
+    "page/detail/pay",
+    "page/detail/putdis",
+    "page/activity/address",
+    "page/orders/orders1",
+    "page/orders/orders2",
+    "page/orders/orders3",
+    "page/orders/orders4",
+    "page/shop/index",
+    "page/shop/order1",
+    "page/shop/release",
+    "page/shop/orderinfo",
+    "page/shop/add"
+    
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "会之利",
+    "navigationBarBackgroundColor": "#03b347",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#818282",
+    "selectedColor": "#03b347",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "page/index",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home-active.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "page/activity/activity",
+        "iconPath": "image/activity.png",
+        "selectedIconPath": "image/activity-active.png",
+        "text": "找活动"
+      },
+      {
+        "pagePath": "page/user/user",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/user-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取位置方便快速定位到附近的活动地点"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

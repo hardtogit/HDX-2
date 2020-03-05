@@ -1,0 +1,33 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="bill_1">
+  <view class="bill_1_1">{{ticketinfo.goodsname}}</view>
+  <view class="det_5"><image src="/image/ico_2.jpg" />{{ticketinfo.starttime}}-{{ticketinfo.endtime}}</view>
+  <view class="det_6"><image src="/image/ico_3.jpg" />{{ticketinfo.address}}</view>
+  <view class="bill_1_3">票号：{{biilnumber}}</view>
+  <view class="bill_1_4" bindtap='toRefresh'><canvas canvas-id="qrcode"/></view>
+  <view class="bill_1_3">{{ticketindex}}/{{ticketinfo.codedata.length}}</view>
+  <view class="bill_left" wx:if="{{ticketinfo.codedata.length>1}}" bindtap='to_Top'><image src="/image/ico_6_2.png" /></view>
+  <view class="bill_right" wx:if="{{ticketinfo.codedata.length>1}}" bindtap='to_Next'><image src="/image/ico_6_1.png" /></view>
+</view>
+<view class="bill_2">
+  <view class="bill_2_t">
+    <view class="bill_2_t_L">
+      <view class="bill_2_t_L1">姓名：{{ticketinfo.sname}}</view>
+      <view class="bill_2_t_L1">电话：{{ticketinfo.stel}}</view>
+      <view class="bill_2_t_L1 on" wx:if="{{ticketinfo.codedata[ticketindex-1].flag==1}}">状态：有效票</view>
+      <view class="bill_2_t_L1" wx:else>状态：无效票</view>
+    </view>
+    <view class="bill_2_t_R">
+      <view class="bill_2_t_L1" wx:if="{{ticketinfo.price0==0}}">票种：免费票</view>
+      <view class="bill_2_t_L1" wx:else>票种：付费票</view>
+      <view class="bill_2_t_L1">票价：{{ticketinfo.price0}}</view>
+      <view class="bill_2_t_L1">实付金额：{{ticketinfo.price0}}</view>
+    </view>
+  </view>
+  <view class="bill_2_b">票券说明：{{ticketinfo.des}}</view>
+</view>
+<view class="bill_3">
+  <view class="bill_3_1">温馨提示：</view>
+  <view class="bill_3_2">1.请不要把电子票随意分享给别人，以免被盗用。</view>
+  <view class="bill_3_2">2.入场时，请提前打开电子票，调亮手机屏幕，扫描二维码检票入场，1人1票。</view>
+</view>

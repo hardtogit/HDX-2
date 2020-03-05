@@ -1,0 +1,33 @@
+<import src="../common/prompt.wxml"/>
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="orders-top">
+  <view wx:for="{{menu}}" wx:key="" bindtap="switchTab" class="left {{curIndex === index?'on':''}}" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}<text></text></view>
+</view>
+<view class="orders-con">
+  <view class="orders_list" wx:for="{{orders}}" wx:key="index">
+    <block wx:for="{{goods}}" wx:key="" wx:for-item="goodsData" wx:if="{{item.OrdId==goodsData.OrdId2}}">
+    <view class="orders_list1" bindtap='toDetail' data-id="{{goodsData.proId}}">
+      <view class="orders_list1_L"><image src="{{goodsData.img}}" mode="widthFix"/></view>
+      <view class="orders_list1_R">
+        <view class="orders_list1_R1">{{goodsData.name}}</view>
+        <view class="orders_list1_R2">
+          <view class="orders_list1_R2_1"><image src="/image/ico_3.jpg" />{{goodsData.city}}</view>
+          <view class="orders_list1_R2_2"><image src="/image/ico_2.jpg" />{{goodsData.starttime}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="orders_list2" wx:if="{{item.flag==1}}" bindtap='openBillInfo' data-id="{{goodsData.id}}">
+      <view class="orders_list2L">有效票</view>
+      <view class="orders_list2R"><view>取电子票</view></view>
+    </view>
+    <view class="orders_list2" wx:else>
+      <view class="orders_list2L">{{item.flagname}}</view>
+      <view class="orders_list2R_off" wx:if="{{goodsData.stock1==0}}"><view>售罄</view></view>
+      <view class="orders_list2R_off" wx:elif="{{goodsData.goodstatus!=1}}"><view>失效</view></view>
+      <view class="orders_list2R_off" wx:elif="{{goodsData.endtime==0}}"><view>已过期</view></view>
+      <view class="orders_list2R" wx:else><view>立即支付</view></view>
+    </view>
+    </block>
+  </view>
+</view>
+<template is="prompt" data="{{prompt}}"/>

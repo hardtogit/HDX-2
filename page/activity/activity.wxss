@@ -1,0 +1,116 @@
+.con_1{
+  margin-top: 14rpx;
+  height: 65rpx;
+}
+.con_1_1{
+  position: relative;
+  float: left;
+  width: 85rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  margin-left: 30rpx;
+  padding-left: 25rpx;
+  color: #171717;
+  font-size: 26rpx;
+}
+.con_1_1 image{
+  position: absolute;
+  width: 15rpx;
+  height: 22rpx;
+  top: 25rpx;
+  left: 0;
+}
+.con_1_2{
+  position: relative;
+  float: left;
+  width: 580rpx;
+  height: 65rpx;
+  background: #f4f4f4;
+  border-radius: 5rpx;
+}
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 25rpx;
+  top: 20rpx;
+}
+.con_1_2 input{
+  height: 65rpx;
+  line-height: 65rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding-left: 48rpx;
+  font-size: 26rpx;
+}
+.con_2{
+  white-space: nowrap;
+  margin-top: 42rpx;
+  height: 60rpx;
+  padding-left: 30rpx;
+  margin-right: 30rpx;
+}
+.con_2 .left{
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.con_2 .on{
+  color: #03b347;
+}
+.con_2 .on text{
+  position: absolute;
+  width: 60rpx;
+  height: 4rpx;
+  left: 38rpx;
+  bottom: 0;
+  background: #03b347;
+}
+.con_3{
+  height: 242rpx;
+  border-top: 20rpx solid #f6f6f6;
+}
+.con_3 swiper{
+  position: relative;
+  width: 100%;
+  height: 242rpx;
+}
+.con_3 image{
+  width: 100%;
+  height: 242rpx;
+}
+.con_4{
+  height: 60rpx;
+  border-top: 20rpx solid #f6f6f6;
+}
+.dl_4{
+  float: left;
+  width: 25%;
+  height: 60rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.dl_4_1{
+  float: left;
+  height: 60rpx;
+  padding-left: 30rpx;
+}
+.dl_4_2{
+  float: left;
+  position: relative;
+  height: 60rpx;
+  padding-left: 10rpx;
+  margin-top: -5rpx;
+}
+.dl_4_2 image{
+  width: 17rpx;
+  height: 10rpx;
+  position: relative;
+}
+.dl_3_L image{
+  width: 100%;
+  height: 100%;
+}

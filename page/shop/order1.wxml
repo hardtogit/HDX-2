@@ -1,0 +1,23 @@
+<import src="../common/prompt.wxml"/>
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="orders-top">
+  <view wx:for="{{menu}}" wx:key="" bindtap="switchTab" class="left {{curIndex === index?'on':''}}" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}<text></text></view>
+</view>
+<view class="orders-con">
+  <view class="orders-list" wx:for="{{orders}}" wx:key="index">
+    <view class="orders-number" bindtap="bntDetails" data-id="{{item.oid}}"><text class="txt_ys" wx:if="{{item.type==2}}">预售</text>订单号：{{item.ordid}}<text class="orders-status2">提货人：{{item.sname}}</text></view>
+    <view class="orders-detail" bindtap="bntDetails" data-id="{{item.oid}}" wx:for="{{goods}}" wx:key="" wx:for-item="goodsData" wx:if="{{item.ordid==goodsData.OrdId2}}">
+      <image src="{{goodsData.img}}"></image>
+      <view class="goods-name">{{goodsData.name}}</view>
+      <view class="goods-price">¥{{goodsData.price}}</view>
+      <text class="orders-status"> × {{goodsData.num}}</text>
+      <text class="cart_weight" wx:if="{{item.type==2}}">预售重量：{{goodsData.num*goodsData.weight}}kg</text>
+    </view>
+    <view class="orders-footer">
+      <text style='float: left;'>总金额：￥{{item.total}}</text>
+      <view class="orders-btn" bindtap="bntDetails" data-id="{{item.oid}}">详情</view>
+      <view class="orders-btn" bindtap="bntConfirm" data-id="{{item.oid}}">发送提货码</view>
+    </view>
+  </view>
+</view>
+<template is="prompt" data="{{prompt}}"/>

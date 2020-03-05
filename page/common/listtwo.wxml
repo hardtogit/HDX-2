@@ -1,0 +1,19 @@
+<template name="listtwo">
+    <view class="newest-box">
+        <view class="newest-list" data-id="{{ item.id }}">
+          <view class="imagesize1">
+            <view class="bg_txt1"><image class='img1' src="/image/ico_1.png"></image><text decode="{{true}}">已售：{{item.soldNum}} &nbsp; 剩余：{{item.stock1}}</text></view>
+            <image class='img2' src="{{item.img1}}"  mode="widthFix"></image>
+          </view>
+          <view class="newest-text1"><text>{{item.name}}</text></view>
+          <view class="newest-text2"><text>{{item.spgg}}</text></view>
+          <view class="newest-text4">￥<text>{{item.price}}</text>元</view><view class="clear"></view>
+          <view class="newest-text3" wx:if="{{item.starttime==1}}"><view>￥<text>{{item.price0}}</text>元</view></view>
+          <view class="newest-text3" wx:else><view>￥<text>?.??</text>元</view></view>
+          <view class="box_num" data-id='{{item.id}}' bindtap="addToCart">+</view>
+          <button data-id='{{item.id}}' data-index="{{index}}" form-type="submit"></button>
+          <view wx:if="{{item.status=='0'}}" class="bg-x1"><view class="txt-x1">已售罄</view></view>
+          <view wx:elif="{{item.endtime=='0' && item.tg=='1'}}" class="bg-x1"><view class="txt-x1">已结束</view></view>
+        </view>
+    </view>
+</template>

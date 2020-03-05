@@ -1,0 +1,7 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "管理中心",
+  "navigationBarBackgroundColor": "#01a95c",
+  "backgroundColor": "#01a95c",
+  "enablePullDownRefresh": false
+}

@@ -1,0 +1,46 @@
+<import src="../common/prompt.wxml"/>
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="fi_1">
+  <swiper autoplay="true" interval="5000" indicator-dots="true">
+    <swiper-item wx:if="{{shopinfo.img1!=''}}"><image src="{{shopinfo.img1}}"/></swiper-item>
+    <swiper-item wx:if="{{shopinfo.img2!=''}}"><image src="{{shopinfo.img2}}"/></swiper-item>
+  </swiper>
+</view>
+<view class="fi_2">
+  <view class="fi_c1">
+    <view class="fi_c1_1">
+      <view class="fi_c1_1L"><image src="{{shopinfo.logo}}" mode="widthFix" /></view>
+      <view class="fi_c1_1C">
+        <view class="fi_c1_1C1">{{shopinfo.name2}}</view>
+        <view class="fi_c1_1C2"><text decode="{{true}}" space="{{true}}">粉丝数 {{shopinfo.num1}} &nbsp; | &nbsp; 活动数 {{shopinfo.num2}}</text></view>
+      </view>
+      <view class="fi_c1_1R">
+        <view wx:if="{{shopinfo.favor==0}}" bindtap="addFavShop">+关注</view>
+        <view wx:else bindtap="celFavShop">取消关注</view>
+      </view>
+    </view>
+    <view class="fi_c1_2">{{shopinfo.des}}</view>
+    <!-- <view class="fi_c1_3"></view> -->
+  </view>
+</view>
+<view class="fi_3">评论</view>
+<view class="fi_4">
+  <view class="dl_7" wx:for="{{disdata}}" wx:key="index">
+    <view class="dl_7_1">
+      <view class="dl_7_1L"><image src="{{item.uimg}}" /></view>
+      <view class="dl_7_1C"><text decode="{{true}}">{{item.uname}} \n 评论了</text></view>
+      <!-- <view class="dl_7_1R">{{item.time}}</view> -->
+    </view>
+    <view class="dl_7_2">{{item.gname}}</view>
+    <view class="dl_7_3">{{item.con}}</view>
+    <view class="dl_7_4">{{item.time}}</view>
+  </view>
+  <template is="prompt" data="{{prompt}}"/>
+</view>
+
+<view class="footer">
+  <view class="img1" bindtap="switchOn"><image src="/image/ico_10_2.jpg" /></view>
+  <view class="img2"><image src="/image/ico_11_1.jpg" /></view>
+</view>
+
+<view class="foot_fx"><button open-type='share'></button><image src="/image/ico_fx1.png"></image></view>

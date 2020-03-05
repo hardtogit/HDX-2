@@ -1,0 +1,7 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "发布活动",
+  "navigationBarBackgroundColor": "#000000",
+  "backgroundColor": "#f8f9fd",
+  "enablePullDownRefresh": false
+}

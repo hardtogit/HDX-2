@@ -1,0 +1,32 @@
+<template name="listone">
+  <view class="select-bottom" data-id="{{ item.id }}">
+    <view class="neirong_L">
+      <image class='img' src="{{ item.img1 }}"></image>
+    </view>
+    <view class="neirong_R">
+      <view class="neirong_1">{{item.name}}</view>
+      <view class="neirong_3 txt_p1">
+        <view class="neirong_3_1">
+          <text decode="{{true}}">已售：{{item.soldNum}} &nbsp;&nbsp; 剩余：{{item.stock1}}</text>
+        </view>
+        <view class="neirong_3_2b">规格:{{item.spgg}}</view>
+        <view class="neirong_3_2a">
+          <view class="neirong_3_2" wx:if="{{item.starttime==1}}">￥
+            <text>{{item.price0}}</text>元</view>
+          <view class="neirong_3_2" wx:else>￥
+            <text>?.??</text>元</view>
+          <view class="neirong_3_3">￥{{item.price}}元</view>
+        </view>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="box_num" data-id='{{item.id}}' bindtap="addToCart">+</view>
+    <button data-id='{{item.id}}' data-index="{{index}}" form-type="submit"></button>
+    <view wx:if="{{item.status=='0'}}" class="bg-x1">
+      <view class="txt-x1">已售罄</view>
+    </view>
+    <view wx:elif="{{item.endtime=='0' && item.tg=='1'}}" class="bg-x1">
+      <view class="txt-x1">已结束</view>
+    </view>
+  </view>
+</template>

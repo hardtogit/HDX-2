@@ -1,0 +1,72 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="a_1">
+  <image wx:if="{{img==''}}" catchtap="chooseImageTap" src="/image/bnt_1.jpg"></image>
+  <image wx:else catchtap="chooseImageTap" src="{{img}}"></image>
+</view>
+<view class="a_2">活动信息</view>
+<view class="a_3">
+  <view class="a_3_1">
+    <view class="a_3_1_L">活动标题</view>
+    <view class="a_3_1_R"><input type="text" placeholder="请输入活动标题" value="{{info.title}}" maxlength='50' bindinput="bindName" /></view>
+  </view>
+  <view class="a_3_1" bindtap='seladdress'>
+    <view class="a_3_1_L">活动地点</view>
+    <view class="a_3_1_C"><view>{{info.address}}</view><image src="/image/icon_right2.png" /></view>
+  </view>
+  <view class="a_3_1">
+  <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+    <view class="a_3_1_L">活动开始时间</view>
+    <view class="a_3_1_C">
+        {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}:{{dateTimeArray1[5][dateTime1[5]]}}<image src="/image/icon_right2.png" />
+    </view>
+  </picker>
+  <!-- <picker mode="date" value="{{info.starttime}}" start="2019-11-01" end="2021-12-12" bindchange="bindDateChange1">
+    <view class="a_3_1_L">活动开始时间</view>
+    <view class="a_3_1_C">{{info.starttime}}<image src="/image/icon_right2.png" /></view>
+  </picker> -->
+  </view>
+  <view class="a_3_1">
+  <picker mode="multiSelector" value="{{dateTime2}}" bindchange="changeDateTime2" bindcolumnchange="changeDateTimeColumn2" range="{{dateTimeArray2}}">
+    <view class="a_3_1_L">活动结束时间</view>
+    <view class="a_3_1_C">
+        {{dateTimeArray2[0][dateTime2[0]]}}-{{dateTimeArray2[1][dateTime2[1]]}}-{{dateTimeArray2[2][dateTime2[2]]}} {{dateTimeArray2[3][dateTime2[3]]}}:{{dateTimeArray2[4][dateTime2[4]]}}:{{dateTimeArray2[5][dateTime2[5]]}}<image src="/image/icon_right2.png" />
+    </view>
+  </picker>
+  <!-- <picker mode="date" value="{{info.endtime}}" start="2019-11-01" end="2021-12-12" bindchange="bindDateChange2">
+    <view class="a_3_1_L">活动结束时间</view>
+    <view class="a_3_1_C">{{info.endtime}}<image src="/image/icon_right2.png" /></view>
+  </picker> -->
+  </view>
+  <view class="a_3_1">
+    <view class="a_3_1_L">活动人数</view>
+    <view class="a_3_1_R"><input type="number" placeholder="若不限制人数，请输入0" value="{{info.peoplenum}}" maxlength='5' bindinput="bindNum" /></view>
+  </view>
+  <view class="a_3_2" bindtap="toRelease">
+    <view class="a_3_1_L">活动详情</view>
+    <view class="a_3_1_C">{{info.con}}<image src="/image/icon_right2.png" /></view>
+  </view>
+</view>
+<view class="a_2">活动设置</view>
+<view class="a_3">
+  <view class="a_3_1">
+    <picker mode="selector" value="{{index}}" range="{{citydata}}" range-key="name" bindchange="bindPickerChange1">
+    <view class="a_3_1_L">所属城市</view>
+    <view class="a_3_1_C"><text wx:if="{{index>-1}}">{{citydata[index].name}}</text><text wx:else>待选择</text><image src="/image/icon_right2.png" /></view>
+    </picker>
+  </view>
+  <view class="a_3_1">
+    <picker mode="selector" value="{{index2}}" range="{{typedata}}" range-key="name" bindchange="bindPickerChange2">
+    <view class="a_3_1_L">所属分类</view>
+    <view class="a_3_1_C"><text wx:if="{{index2>-1}}">{{typedata[index2].name}}</text><text wx:else>待选择</text><image src="/image/icon_right2.png" /></view>
+    </picker>
+  </view>
+  <view class="a_3_2">
+    <view class="a_3_1_L">购买金额</view>
+    <view class="a_3_1_R"><input type="digit" placeholder="输入0，则为免费领取" value="{{info.money}}" maxlength='10' bindinput="bindMoney" /></view>
+  </view>
+</view>
+<view class="a_h145"></view>
+<view class="a_save">
+  <view class="a_save1" bindtap="btnSave">保存为草稿</view>
+  <view class="a_save2" bindtap="btnSave">立即发布</view>
+</view>

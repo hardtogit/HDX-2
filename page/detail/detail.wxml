@@ -1,0 +1,93 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="main_1">
+  <view class="det_1">
+    <swiper class="swiper_box" autoplay="true" interval="5000" indicator-dots="true">
+    <swiper-item wx:if="{{goodsinf.img1!=''}}">
+      <view data-type="{{goodsinf.img1}}"><image src="{{goodsinf.img1}}"/></view>
+    </swiper-item>
+     <swiper-item wx:if="{{goodsinf.img2!=''}}">
+        <view data-type="{{goodsinf.img2}}"><image src="{{goodsinf.img2}}"/></view>
+      </swiper-item>
+      <swiper-item wx:if="{{goodsinf.img3!=''}}">
+        <view data-type="{{goodsinf.img3}}"><image src="{{goodsinf.img3}}"/></view>
+      </swiper-item>
+      <swiper-item wx:if="{{goodsinf.img4!=''}}">
+        <view data-type="{{goodsinf.img4}}"><image src="{{goodsinf.img4}}"/></view>
+      </swiper-item>
+      <swiper-item wx:if="{{goodsinf.img5!=''}}">
+        <view data-type="{{goodsinf.img5}}"><image src="{{goodsinf.img5}}"/></view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="det_2">{{goodsinf.title}}</view>
+  <view class="det_3"><text decode="{{true}}" space="{{true}}">浏览&nbsp;&nbsp;{{goodsinf.amountNum}}&nbsp;&nbsp;收藏&nbsp;&nbsp;{{goodsinf.favNum}}</text></view>
+  <view class="det_4">¥{{goodsinf.price0}}</view>
+  <view class="det_5"><image src="/image/ico_2.jpg" />{{goodsinf.starttime}}-{{goodsinf.endtime}}</view>
+  <view class="det_6" bindtap="openMap"><image src="/image/ico_3.jpg" />{{goodsinf.spgg}}</view>
+</view>
+<view class="det_7">
+  <view class="det_7_1">
+    <view class="det_7_1L"><image src="{{shopinfo.img}}" mode="aspectFit" /></view>
+    <view class="det_7_1R">
+      <view class="det_7_1R_1">{{shopinfo.name1}}<image src="/image/ico_7.jpg" /></view>
+      <view class="det_7_1R_2">{{shopinfo.des}}</view>
+      <view class="det_7_1R_3">
+        <view class="det_7_1R_3_1"><image src="/image/ico_8.jpg" />粉丝</view>
+        <view class="det_7_1R_3_2">{{shopinfo.num1}}</view>
+        <view class="det_7_1R_3_3"><image src="/image/ico_9.jpg" />活动</view>
+        <view class="det_7_1R_3_2">{{shopinfo.num2}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="det_7_2">
+    <view wx:if="{{shopinfo.favor==0}}" class="on" bindtap="addFavShop">+关注</view>
+    <view wx:else>已关注</view>
+    <view class="on" bindtap="toFirm" data-id="{{shopinfo.id}}">主办方小站</view>
+  </view>
+</view>
+<view class="det_8" bindtap="toDiscuss">历史评论<image src="/image/ico_5.jpg" /></view>
+<view class="det_9" wx:for="{{disdata}}" wx:key="index">
+  <view class="det_9_1">
+    <view class="det_9_1L"><image src="{{item.uimg}}" />{{item.uname}}</view>
+    <view class="det_9_1R">{{item.time}}</view>
+  </view>
+  <view class="det_9_2">{{item.con}}</view>
+</view>
+<view class="det_10">
+  <view bindtap="binDis">我要评论</view>
+  <view class="det_10_2">活动咨询<button open-type="contact" class="nav-custom" plain="true"></button></view>
+</view>
+<view class="det_8" bindtap="toInfo" data-id="{{goodsinf.id}}">活动详情<image src="/image/ico_5.jpg" /></view>
+<view class="det_11">{{goodsinf.des}}</view>
+<view class="det_12" bindtap="toInfo" data-id="{{goodsinf.id}}">查看更多<image src="/image/ico_6.jpg" /></view>
+<view class="fdgwc">
+  <view class="fdgwc_1"  bindtap="toHome">
+    <image src="/image/ico_4_1.png"></image>
+      <view>
+        <text>首页</text>
+      </view>
+    </view>
+    <view class="fdgwc_1" bindtap="addFavor" wx:if="{{goodsinf.favor==0}}">
+      <image src="/image/ico_4_2.png"></image>
+      <view>
+        <text>收藏</text>
+      </view>
+    </view>
+    <view class="fdgwc_1" bindtap="addFavor" wx:else>
+      <image src="/image/ico_4_4.png"></image>
+      <view>
+        <text>收藏</text>
+      </view>
+    </view>
+    <view class="fdgwc_2" bindtap="toCart">
+      <button open-type='share'></button>
+      <image src="/image/ico_4_3.png"></image>
+      <view>
+        <text>分享</text>
+      </view>
+    </view>
+    <view class="fdgwc_3_off" wx:if="{{goodsinf.endtime2==0}}"><view>已过期</view></view>
+    <view class="fdgwc_3_off" wx:if="{{goodsinf.status!=1}}"><view>失效</view></view>
+    <view class="fdgwc_3" wx:elif="{{goodsinf.bm==0}}" bindtap="addBuy"><view>立即报名</view></view>
+    <view class="fdgwc_3_off" wx:else><view>已报名</view></view>
+</view>

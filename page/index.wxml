@@ -1,0 +1,100 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="con_1">
+  <view class="con_1_1" bindtap="bindAddress"><image src="/image/ico_2_1.png" />{{cityName}}</view>
+  <view class="con_1_2" bindtap="toSearch">
+    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+    <input type="text" disabled='disabled' placeholder="搜索精彩活动" readonly="readonly" />
+  </view>
+  <!-- <view class="con_1_3">
+    <button type="primary" bindtap="scanRg" id="scan"></button>
+    <image src="/image/ico_2_2.png" />
+  </view> -->
+</view>
+<view class="con_2">
+  <scroll-view scroll-x style="width:auto; hidden:60rpx;">
+  <view wx:for="{{menu}}" bindtap='switchOn' wx:key="" class="left {{curIndex === index?'on':''}}" data-id="{{item.id}}" data-code="{{item.code}}" data-index="{{index}}">{{item.name}}<text></text></view>
+  </scroll-view>
+</view>
+<view class="con_home" wx:if="{{curIndex==0}}">
+<view class="con_3">
+  <swiper autoplay="true" interval="5000" indicator-dots="true">
+    <swiper-item wx:for="{{banner}}" wx:key="" bindtap='navigateTo' data-path="{{item.url}}"><image src="{{item.img}}" /></swiper-item>
+  </swiper>
+</view>
+<view class="con_4">
+  <view class="con_4_1" bindtap="switchTabTo"  data-path="/page/activity/activity"><image src="/image/ico_1_1.png" />人气榜</view>
+  <view class="con_4_2" bindtap="navigateTo"  data-path="/page/rl/index"><image src="/image/ico_1_2.png" />活动日历</view>
+  <view class="con_4_3" bindtap="switchTabTo"  data-path="/page/activity/activity"><image src="/image/ico_1_3.png" />认证活动</view>
+  <view class="con_4_4" bindtap="navigateTo"  data-path="/page/keep/list"><image src="/image/ico_1_4.png" />收藏</view>
+</view>
+<view class="con_5">强力推荐</view>
+<view class="con_6">
+  <view class="dl_1" wx:for="{{goodsTj}}" wx:key="" bindtap='toDetail' data-id="{{item.id}}">
+    <view class="dl_1_d1"><image src="{{item.img1}}" mode="aspectFit" /></view>
+    <view class="dl_1_d2">{{item.name}}</view>
+    <view class="dl_1_d3">
+      <view class="dl_1_d3_1">{{item.city}}</view>
+      <view class="dl_1_d3_2">{{item.starttime}}</view>
+    </view>
+  </view>
+  <view class="clear"></view>
+</view>
+<view class="con_5">当我们谈论创新时</view>
+<view class="con_6">
+  <view class="dl_1" wx:for="{{goodsZd}}" wx:key="" bindtap='toDetail' data-id="{{item.id}}">
+    <view class="dl_1_d1"><image src="{{item.img1}}" mode="aspectFit" /></view>
+    <view class="dl_1_d2">{{item.name}}</view>
+    <view class="dl_1_d3">
+      <view class="dl_1_d3_1">{{item.city}}</view>
+      <view class="dl_1_d3_2">{{item.starttime}}</view>
+    </view>
+  </view>
+  <view class="clear"></view>
+</view>
+<view class="con_5" bindtap="binRefresh">TA在办好活动<view class="con_5_Refresh"><image src="/image/ico_4.jpg" /></view></view>
+<view class="con_7">
+  <view class="dl_2" wx:for="{{shopData}}" wx:key="" bindtap='toFirm' data-id="{{item.id}}" data-name="{{item.name1}}">
+    <view class="dl_2_d1"><image src="{{item.img}}" mode="aspectFit" /></view>
+    <view class="dl_2_d2">{{item.name1}}</view>
+    <view class="dl_2_d3">{{item.name2}}</view>
+    <view class="dl_2_d4">关注</view>
+  </view>
+</view>
+<view class="con_8">—— 为你推荐 ——</view>
+<view class="con_9">
+  <view class="dl_3" wx:for="{{goods}}" wx:key="" bindtap='toDetail' data-id="{{item.id}}" data-index="{{index}}" wx:if="{{index<5}}">
+    <view class="dl_3_L"><image src="{{item.img1}}" /></view>
+    <view class="dl_3_R">
+      <view class="dl_3_R1">{{item.name}}</view>
+      <view class="dl_3_R2">{{item.city}}</view>
+      <view class="dl_3_R3">
+        <view class="dl_3_R3_1">{{item.starttime}}</view>
+        <view class="dl_3_R3_2">¥{{item.price0}}</view>
+      </view>
+      <view class="dl_3_R4">
+        <view wx:if="{{item.bm>0}}">已报名</view>
+        <view class="on" wx:else>立即报名</view>
+      </view>
+    </view>
+  </view>
+</view>
+</view>
+<view class="con_activity" wx:else>
+  <view class="con_9">
+  <view class="dl_3" wx:for="{{activity}}" wx:key="" bindtap='toDetail' data-id="{{item.id}}" data-index="{{index}}">
+    <view class="dl_3_L"><image src="{{item.img1}}" /></view>
+    <view class="dl_3_R">
+      <view class="dl_3_R1">{{item.name}}</view>
+      <view class="dl_3_R2">{{item.city}}</view>
+      <view class="dl_3_R3">
+        <view class="dl_3_R3_1">{{item.starttime}}</view>
+        <view class="dl_3_R3_2">¥{{item.price0}}</view>
+      </view>
+      <view class="dl_3_R4">
+        <view wx:if="{{item.bm>0}}">已报名</view>
+        <view class="on" wx:else>立即报名</view>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

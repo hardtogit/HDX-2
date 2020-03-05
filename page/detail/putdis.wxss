@@ -1,0 +1,35 @@
+page{
+  background: #e6e6e6;
+}
+.put_1{
+  margin-top: 16rpx;
+  background: #ffffff;
+  height: 360rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #707070;
+}
+.put_2{
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 30rpx;
+  background: #1aac19;
+  text-align: center;
+  border-radius:8rpx; 
+  color: #ffffff;
+  font-size: 32rpx;
+}
+.put_3{
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 30rpx;
+  background: #ffffff;
+  text-align: center;
+  border-radius:8rpx; 
+  color: #000000;
+  font-size: 32rpx;
+}

@@ -1,0 +1,64 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="con_1">
+  <view class="con_1L"><image src="{{ userInfo.avatarUrl }}"></image></view>
+  <view class="con_1R">
+    <view class="con_1R1">{{userInfo.nickName}}</view>
+    <view class="con_1R2">关联主办方：{{shopInfo.name1}}</view>
+    <view class="con_1R_p"><text bindtap="binOut">退出</text></view>
+  </view>
+</view>
+<!-- <view class="con_2" bindtap="toSearch">
+  <icon type="search" size="14"></icon>
+  <input type="text" disabled="true" placeholder="请输入票券码" maxlength="20" />
+</view> -->
+<view class="con_3">
+  <view class="con_3_1">
+    <view class="con_3_1_1" bindtap="toUrl" data-url='add'>
+      <image src="/image/icon_t4_1.png"></image>
+      发布活动
+    </view>
+    <view class="con_3_1_1">
+      <button type="primary" bindtap="scanTh" id="scan"></button>
+      <image src="/image/icon_t4_3.png"></image>
+      扫码核销
+    </view>
+    <!-- <view class="con_3_1_1" bindtap="toUrl" data-url='order4'>
+      <image src="/image/icon_t4_2.png"></image>
+      已核销
+    </view> -->
+  </view>
+  <!-- <view class="con_3_2">
+    <view class="con_3_2_1" bindtap="toUrl" data-url='order1'>
+      <image src="/image/icon_t2.png"></image>
+      活动列表
+    </view>
+  </view> -->
+</view>
+<view class="con_4">
+  <view class="con_4_1" bindtap="toMore">
+    <view class="con_4_1L">统计概况</view>
+    <view class="con_4_1R">更多<image src="/image/icon_right.png"></image></view>
+  </view>
+  <view class="con_4_2" bindtap="toMore">
+    <view class="con_4_2L">
+      <view class="con_4_2L1">{{shopInfo.num1}}</view>
+      <view class="con_4_2L2">今日</view>
+      <view class="con_4_2L2">有效订单(单)</view>
+    </view>
+    <view class="con_4_2L">
+      <view class="con_4_2L1">{{shopInfo.money1}}</view>
+      <view class="con_4_2L2">今日</view>
+      <view class="con_4_2L2">有效成交额(元)</view>
+    </view>
+    <view class="con_4_2L">
+      <view class="con_4_2L1"><text>{{shopInfo.num2}}</text></view>
+      <view class="con_4_2L2">今日</view>
+      <view class="con_4_2L2">核销张数(元)</view>
+    </view>
+  </view>
+  <view class="con_4_3">
+    <view class="con_4_3L">待核销张数：{{shopInfo.num3}}单</view>
+  </view>
+</view>
+
+<view class="foot_muen0" bindtap="toUHome"><image src="/image/icon_t5_2.png"></image></view>

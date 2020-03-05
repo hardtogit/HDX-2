@@ -1,0 +1,15 @@
+<import src="../common/prompt.wxml"/>
+<view class="orders-list"  wx:key="index">
+  <view class="orders-detail" wx:for="{{GoodsList}}" wx:key="">
+    <navigator url="../details/details?id={{item.gid}}"><image src="{{item.img}}"></image></navigator>
+    <navigator url="../details/details?id={{item.gid}}"><view class='goods-name'>{{item.name}}</view></navigator>
+    <view wx:if="{{item.starttime==1}}">¥{{item.price0}}</view>
+    <view wx:else>¥?.??</view>
+    <text class="orders-status" bindtap="ButDel" data-index="{{index}}">×</text>
+  </view>
+</view>
+<template is="prompt" data="{{prompt}}"/>
+<view class="foot_muen">
+  <view class="foot_muen1" bindtap="toHome"><image src="/image/home2.png"></image></view>
+  <view class="foot_muen2" bindtap="toCart"><image src="/image/cart2.png"></image></view>
+</view>

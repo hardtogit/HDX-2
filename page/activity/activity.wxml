@@ -1,0 +1,53 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="con_1">
+  <view class="con_1_1" bindtap="bindAddress"><image src="/image/ico_2_1.png" />{{cityName}}</view>
+  <view class="con_1_2" bindtap="toSearch">
+    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+    <input type="text" disabled='disabled' placeholder="搜索精彩活动" readonly="readonly" />
+  </view>
+</view>
+<view class="con_2">
+  <scroll-view scroll-x style="width:auto; hidden:60rpx;">
+  <view wx:for="{{menu}}" wx:key="" bindtap='switchOn' class="left {{curIndex === index?'on':''}}" data-id="{{item.id}}" data-code="{{item.code}}" data-index="{{index}}">{{item.name}}<text></text></view>
+  </scroll-view>
+</view>
+<view class="con_3">
+  <swiper autoplay="true" interval="5000" indicator-dots="true">
+    <swiper-item wx:for="{{banner}}" wx:key="" bindtap='navigateTo' data-path="{{item.url}}"><image src="{{item.img}}" /></swiper-item>
+  </swiper>
+</view>
+<!-- <view class="con_4">
+  <view class="dl_4">
+    <view class="dl_4_1">全类型</view>
+    <view class="dl_4_2"><image src="/image/ico_1.jpg" /></view>
+  </view>
+  <view class="dl_4">
+    <view class="dl_4_1">全时段</view>
+    <view class="dl_4_2"><image src="/image/ico_1.jpg" /></view>
+  </view>
+  <view class="dl_4">
+    <view class="dl_4_1">全价格</view>
+    <view class="dl_4_2"><image src="/image/ico_1.jpg" /></view>
+  </view>
+  <view class="dl_4">
+    <view class="dl_4_1">综合排序</view>
+    <view class="dl_4_2"><image src="/image/ico_1.jpg" /></view>
+  </view>
+</view> -->
+<view class="con_5">
+  <view class="dl_3" wx:for="{{activity}}" wx:key="" bindtap='toDetail' data-id="{{item.id}}">
+    <view class="dl_3_L"><image src="{{item.img1}}" mode="aspectFit" /></view>
+    <view class="dl_3_R">
+      <view class="dl_3_R1"><text wx:if="{{item.tj==1}}">优选</text>{{item.name}}</view>
+      <view class="dl_3_R2">{{item.city}}</view>
+      <view class="dl_3_R3">
+        <view class="dl_3_R3_1">{{item.starttime}}</view>
+        <view class="dl_3_R3_2">¥{{item.price0}}</view>
+      </view>
+      <view class="dl_3_R4">
+        <view wx:if="{{item.bm>0}}">已报名</view>
+        <view class="on" wx:else>立即报名</view>
+      </view>
+    </view>
+  </view>
+</view>

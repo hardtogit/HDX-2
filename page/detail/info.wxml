@@ -1,0 +1,10 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<import src="../../wxParse/wxParse.wxml" />
+<view class="info_1">
+ <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>
+
+<view class="foot_muen">
+  <view class="foot_muen1" bindtap="toHome"><image src="/image/home2.png"></image></view>
+  <view class="foot_muen2" bindtap="toUser"><image src="/image/user2.png"></image></view>
+</view>

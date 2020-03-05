@@ -1,0 +1,33 @@
+<view class="dl_3">
+    <view class="dl_3_L"><image src="{{goodsinf.img1}}" /></view>
+    <view class="dl_3_R">
+      <view class="dl_3_R1">{{goodsinf.title}}</view>
+      <view class="dl_3_R2">{{goodsinf.starttime}}</view>
+      <view class="dl_3_R3">
+        <view class="dl_3_R3_1">¥{{goodsinf.price0}}</view>
+        <view class="dl_3_R3_3">
+          <view class="count-box1"><text class="cart-count-down" bindtap="minusCount">-</text></view>
+          <view class="count-box2">{{num}}</view>
+          <view class="count-box1"><text class="cart-count-add" bindtap="addCount">+</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+<view class="acon_1">
+  <view class="acon_1_1">姓名<text>(必填)</text></view>
+  <view class="acon_1_2"><input type="text" value="{{formInfo.name}}" maxlength='20' bindinput="bindName" /></view>
+</view>
+<view class="acon_1">
+  <view class="acon_1_1">手机<text>(必填)</text></view>
+  <view class="acon_1_2"><input type="number" value="{{formInfo.tel}}" maxlength='11' bindinput="bindTel" /></view>
+</view>
+<view class="acon_1">
+  <view class="acon_1_1">邮箱<text>(必填)</text></view>
+  <view class="acon_1_2"><input type="text" value="{{formInfo.email}}" maxlength='20' bindinput="bindEmail" /></view>
+</view>
+<view class="acon_1">
+  <view class="acon_1_1">备注<text>(选填)</text></view>
+  <view class="acon_1_2"><input type="text" value="{{formInfo.des}}" maxlength='100' bindinput="bindDes" /></view>
+</view>
+<view class="acon_bottom" bindtap="bindNext">下一步</view>

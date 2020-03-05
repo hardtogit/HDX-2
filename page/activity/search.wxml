@@ -1,0 +1,16 @@
+<view class="con_1">
+  <view class="con_1_1"><image src="/image/ico_2_1.png" />{{cityName}}</view>
+  <view class="con_1_2">
+    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+    <input type="text" placeholder="搜索精彩活动" bindinput="bindName"/>
+  </view>
+  <view class="con_1_3" bindtap="bindSearch">搜索</view>
+</view>
+<view class="se_1">热门搜索</view>
+<view class="se_2" bindtap="bindSearch">
+  <text bindtap="bindSearchKey" wx:for="{{datarm}}" wx:key="" data-key="{{item.name}}">{{item.name}}</text>
+</view><view class="clear"></view>
+<view class="se_1">最近搜索</view>
+<view class="se_2" bindtap="bindSearch">
+  <text bindtap="bindSearchKey" wx:for="{{datals}}" wx:key="" data-key="{{item.name}}">{{item.name}}</text>
+</view>

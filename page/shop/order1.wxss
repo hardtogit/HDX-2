@@ -1,0 +1,28 @@
+@import '/page/common/common.wxss';
+page{
+  background: #eeeeee;
+}
+.orders-top{
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #ffffff;
+    z-index: 999;
+}
+.orders-top .left{
+  float: left;
+  width: 50%;
+  height: 80rpx;
+  text-align: center;
+}
+.orders-top .on text{
+  position: absolute;
+  width: 100rpx;
+  height: 6rpx;
+  left: 136rpx;
+  bottom: 0;
+  background: #01a95c;
+}

@@ -1,0 +1,91 @@
+page{
+  background: #f4f4f4;
+}
+.list_1{
+  padding: 30rpx;
+  padding-bottom: 100rpx;
+}
+.dl_6{
+  height: 546rpx;
+  overflow: hidden;
+  border-radius: 15rpx;
+  background: #ffffff;
+  margin-bottom: 25rpx;
+}
+.dl_6_1{
+  height: 410rpx;
+}
+.dl_6_1 image{
+  width: 100%;
+  height: 410rpx;
+}
+.dl_6_2{
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  word-break:keep-all;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  padding-left: 12rpx;
+  padding-right: 12rpx;
+}
+.dl_6_3{
+  height: 64rpx;
+  line-height: 64rpx;
+  padding-left: 12rpx;
+  padding-right: 12rpx;
+  color: #7b7b7b;
+}
+.dl_6_3L{
+  float: left;
+  position: relative;
+  height: 64rpx;
+  padding-left: 35rpx;
+}
+.dl_6_3L image{
+  position: absolute;
+  width: 29rpx;
+  height: 29rpx;
+  left: 0rpx;
+  top: 17rpx;
+}
+.dl_6_3R{
+  float: right;
+  position: relative;
+  height: 64rpx;
+  padding-left: 35rpx;
+}
+.dl_6_3R image{
+  position: absolute;
+  width: 27rpx;
+  height: 31rpx;
+  left: 0rpx;
+  top: 16rpx;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 106rpx;
+  background: #ffffff;
+  border-top: 2rpx solid #f3f3f3;
+}
+.footer view{
+  float: left;
+  width: 50%;
+  height: 106rpx;
+  text-align: center;
+}
+.img1 image{
+  width: 41rpx;
+  height: 50rpx;
+  margin-top: 28rpx;
+}
+.img2 image{
+  width: 47rpx;
+  height: 47rpx;
+  margin-top: 30rpx;
+}

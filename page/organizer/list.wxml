@@ -1,0 +1,17 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="se_2_2">
+  <view class="dl_5" wx:for="{{shopdata}}" wx:key="">
+      <view class="dl_5_L"><image src="{{item.img}}" mode="widthFix" /></view>
+      <view class="dl_5_C">
+        <view class="dl_5_C1">{{item.name1}}</view>
+        <view class="dl_5_C2">{{item.des}}</view>
+        <view class="dl_5_C3">
+          <view class="det_7_1R_3_1"><image src="/image/ico_8.jpg" />粉丝</view>
+          <view class="det_7_1R_3_2">{{item.num1}}</view>
+          <view class="det_7_1R_3_3"><image src="/image/ico_9.jpg" />活动</view>
+          <view class="det_7_1R_3_2">{{item.num2}}</view>
+        </view>
+      </view>
+      <view class="dl_5_R" bindtap='bindCancel' data-id="{{item.id}}" data-index="{{index}}"><view>取消关注</view></view>
+    </view>
+</view>

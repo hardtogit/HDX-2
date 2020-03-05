@@ -1,0 +1,73 @@
+<view class="main">
+  <view class="header" wx:if="{{userInfo.uid>0}}" data-path="info" bindtap="navigateTo">
+    <image src="{{userInfo.avatarUrl}}" class="thumb"></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="header" wx:else>
+    <image src="/image/ico_weixin_1.png" class="thumb"></image>
+    <text class="nickname">点击登录账户</text>
+  </view>
+  <view class="orders-box">
+    <view class="orders" bindtap='toOrders' data-index="0">我的票券</view>
+    <view class="orders2">
+      <view class="left" bindtap='toOrders' data-index="1">
+        <image src="/image/ico_12_3.png" ></image>
+        <view><text>待支付</text></view>
+        <view class="icon_num" wx:if="{{ordnumdata.num1!=0}}">{{ordnumdata.num1}}</view>
+      </view>
+      <view class="left" bindtap='toOrders' data-index="2">
+        <image src="/image/ico_12_1.png" ></image>
+        <view><text>待参加</text></view>
+        <view class="icon_num" wx:if="{{ordnumdata.num2!=0}}">{{ordnumdata.num2}}</view>
+      </view>
+      <view class="left" bindtap='toOrders' data-index="3">
+        <image src="/image/ico_12_4.png" ></image>
+        <view><text>待评价</text></view>
+        <view class="icon_num" wx:if="{{ordnumdata.num3!=0}}">{{ordnumdata.num3}}</view>
+      </view>
+      <view class="left" bindtap='toOrders' data-index="4">
+        <image src="/image/ico_12_2.png" ></image>
+        <view><text>已完成</text></view>
+        <view class="icon_num" wx:if="{{ordnumdata.num4!=0}}">{{ordnumdata.num4}}</view>
+      </view>
+    </view> 
+  </view>
+  <view class="tag-box">
+    <view class="weui-cells">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ items }}" wx:key="" data-path="{{ item.path }}" data-index="{{ index }}" bindtap="navigateTo">
+        <view class="weui-cell__hd">
+          <image src="{{ item.icon }}"></image>
+        </view>
+        <view class="weui-cell__bd">{{ item.text }}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image src="/image/ico_13_5.png"></image>
+        </view>
+        <view class="weui-cell__bd">在线客服</view>
+        <button open-type="contact" class="nav-custom" plain="true"></button>
+      </view>
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="tcBindtap">
+        <view class="weui-cell__hd">
+          <image src="/image/icon_tc.png"></image>
+        </view>
+        <view class="weui-cell__bd">退出登录</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="foot_muen0" bindtap="bindOpen"><image src="/image/icon_t5_1.png"></image></view>
+<!-- 管理员登录 -->
+<view class="pp_mb" hidden="{{!bl1}}" bindtap="bindClose"></view>
+<view class="pp_fb" hidden="{{!bl1}}">
+  <view class="pp_close" bindtap="bindClose"><image src='/image/icon_7.png'></image></view>
+  <view class="pp_fb0">管理员登录</view>
+  <view class="pp_fb1"><input type="text" placeholder="请输入用户名" value="{{name}}" maxlength='20' bindinput="bindName" /></view>
+  <view class="pp_fb2"><input type="text" password="{{true}}" placeholder="请输入密码" value="{{pwd}}" maxlength='20' bindinput="bindPwd" /></view>
+  <view class="pp_fb3" bindtap="bindLanding">登录</view>
+</view>
+
+<!--未登录遮罩层-->
+<view class="pp_mz" wx:if="{{userInfo.uid==0}}" bindtap="bindDl"></view>

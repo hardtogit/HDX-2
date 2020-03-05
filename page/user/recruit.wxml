@@ -1,0 +1,48 @@
+<loading hidden="{{hidden}}">提交中...</loading>
+<form bindsubmit="formSubmit" report-submit="true">
+<view class="con_bg"></view>
+<view class="con_re1">申请导游身份</view>
+<view class="con_re2">需要您填写真实姓名并验证手机</view>
+<view class="con_re3">
+  <view class="box-feed3-1" wx:if="{{platform_mode==1}}">
+    <view class="box-feed-l">选择门店</view>
+    <view class="box-feed-r">
+      <picker bindchange="bindCasPickerChange" value="{{storeIndex}}" range="{{storeArray}}">
+        <view><text>{{storeArray[storeIndex]}}</text></view>
+        </picker>
+    </view>
+  </view>
+  <view class="box-feed3-1">
+    <view class="box-feed-l">选择区域</view>
+    <view class="box-feed-r">{{areaInfo}}<button bindtap="moveToLocation" class="button1" type="primary">点击选择区域</button></view>
+  </view>
+  <view class="box-feed3-1">
+    <view class="box-feed-l">真实姓名</view>
+    <view class="box-feed-r"><input class="ask-input1" type="text" placeholder="请输入真实姓名" value="" maxlength='30' bindinput="bindName" /></view>
+  </view>
+  <view class="box-feed3-1">
+    <view class="box-feed-l">手机号码</view>
+    <view class="box-feed-r"><input class="ask-input1" type="text" placeholder="请输入手机号码" value="{{headInfo.tel}}" maxlength='11' bindinput="bindPhone" /></view>
+  </view>
+  <view class="box-feed3-1">
+    <view class="box-feed-l">验证码</view>
+    <view class="box-feed-r"><input class="ask-input2" type="number" placeholder="请输入验证码" value="" maxlength='6' bindinput="bindCode" /></view>
+    <view class="con_msg1" wx:if="{{time=='获取验证码'||time=='重新获取'}}" bindtap="getCode">{{time}}</view>
+    <view class="con_msg2" wx:else>{{time}}</view>
+  </view>
+  <view class="box-feed3-1">
+    <view class="box-feed-l">身份证号</view>
+    <view class="box-feed-r"><input class="ask-input1" type="idcard" placeholder="请输入身份证号码" value="" maxlength='18' bindinput="bindSfz" /></view>
+  </view>
+  <view class="box-feed3-2">
+    <view class="box-feed-l">形 象 照</view>
+    <view class="box-feed-r">
+      <image wx:if="{{img!=null}}" catchtap="chooseImageTap" src="{{img}}" style='width:99rpx; height:112rpx;'></image>
+      <image wx:else catchtap="chooseImageTap" src="/image/ico_sc.png" style='width:99rpx; height:112rpx;'></image>
+    </view>
+  </view>
+</view>
+<view class="con_re4">
+  <button form-type="submit">提交申请</button>
+</view>
+</form>

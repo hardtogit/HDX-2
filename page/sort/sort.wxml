@@ -1,0 +1,48 @@
+<import src="/page/common/prompt.wxml"/>
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="con_search fixc1">
+  <view class="con_search_top"></view>
+  <view class="con_searchL">
+  <form bindsubmit="formHead" report-submit="true">
+  提货门店：{{hendData.name}}<image src="/image/ico-3.jpg" />
+  <button form-type="submit"></button>
+  </form>
+  </view>
+</view>
+<view class="con_1L">
+  <scroll-view scroll-y style="height: 100%;">
+  <view class="dl_2"></view>
+  <block wx:for="{{sortData}}" wx:key="">
+  <view wx:if="{{item.on==1}}" bindtap="selSort" data-id="{{item.id}}" data-index="{{index}}" class="dl_1 on">{{item.name}}</view>
+  <view wx:else class="dl_1"  bindtap="selSort" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+  </block>
+  </scroll-view>
+</view>
+<view class="con_1R">
+  <scroll-view scroll-y style="height: 100%;">
+  <view class="dl_2"></view>
+  <form bindsubmit="formSubmit" report-submit="true">
+  <block wx:for="{{goods}}" wx:key="">
+  <view class="dl_3">
+    <view class="dl_3L"><image class='img' src="{{item.img1}}"></image></view>
+    <view class="dl_3R">
+      <view class="dl_3R_1">{{item.name}}</view>
+      <view class="neirong_3_1"><text decode="{{true}}">已售：{{item.soldNum}} &nbsp;&nbsp; 剩余：{{item.stock1}}</text></view>
+      <view class="dl_3R_2">规格:{{item.spgg}}</view>
+      <view class="neirong_3_2a">
+        <view class="neirong_3_2" wx:if="{{item.starttime==1}}">￥<text>{{item.price0}}</text>元</view>
+        <view class="neirong_3_2" wx:else>￥<text>?.??</text>元</view>
+        <view class="neirong_3_3">￥{{item.price}}元</view>
+      </view>
+      <view class="box_num" wx:if="{{item.starttime==1}}" data-id='{{item.id}}' bindtap="addToCart">+</view>
+      <view class="box_num2"  wx:else>+</view>
+    </view>
+    <button data-id='{{item.id}}' data-index="{{index}}" form-type="submit"></button>
+    <view wx:if="{{item.status=='0'}}" class="bg-x1"><view class="txt-x1">已售罄</view></view>
+    <view wx:elif="{{item.endtime=='0' && item.tg=='1'}}" class="bg-x1"><view class="txt-x1">已结束</view></view>
+  </view>
+  </block>
+  </form>
+  <template is="prompt" data="{{prompt}}"/>
+  </scroll-view>
+</view>

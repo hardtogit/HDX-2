@@ -1,0 +1,105 @@
+.calendar_title {
+  justify-content: space-between;
+  font-size: 42rpx;
+  color: #fff;
+  background: #03b347;
+  text-align: center;
+  height: 160rpx;
+  padding-top: 100rpx;
+}
+.icon1{
+  float: left;
+  width: 60rpx;
+  margin-left: 140rpx;
+  height: 60rpx;
+}
+.txt1{
+  float: left;
+  width:350rpx; 
+  height: 60rpx;
+  text-align: center;
+}
+.icon2{
+  float: right;
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 140rpx;
+}
+.calendar_title image {
+  width: 32rpx;
+  height: 48rpx;
+  margin-top: 6rpx;
+}
+
+/* 日历 */
+
+.calendar {
+  width: 100%;
+  margin-top: 75rpx;
+  background: #fff;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  padding: 0 0 20rpx;
+  font-family: FZZhunYuan-M02S;
+}
+
+.header {
+  font-size: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header>view {
+  display: inline-block;
+  width: 14.285%;
+  color: #666;
+  font-size: 30rpx;
+  text-align: center;
+  border-bottom: 1px solid #d0d0d0;
+  padding: 20rpx 0;
+}
+
+.weekMark {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.weekMark view {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid #03b347;
+}
+
+.date-box {
+  font-size: 0;
+  padding: 10rpx 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.date-box>view {
+  position: relative;
+  display: inline-block;
+  width: 14.285%;
+  color: #666;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.date-head {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 12pt;
+}
+
+.nowDay .date-head {
+  width: 60rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  background-color: #03b347;
+  margin: 0 auto;
+}

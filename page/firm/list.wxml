@@ -1,0 +1,15 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="list_1">
+  <view class="dl_6" wx:for="{{activity}}" wx:key="" bindtap='toDetail' data-id="{{item.id}}">
+    <view class="dl_6_1"><image src="{{item.img1}}" /></view>
+    <view class="dl_6_2">{{item.name}}</view>
+    <view class="dl_6_3">
+      <view class="dl_6_3L"><image src="/image/ico_2.jpg" />{{item.starttime}}</view>
+      <view class="dl_6_3R"><image src="/image/ico_3.jpg" />{{item.city}}</view>
+    </view>
+  </view>
+</view>
+<view class="footer">
+  <view class="img1"><image src="/image/ico_10_1.jpg" /></view>
+  <view class="img2" bindtap="switchOn"><image src="/image/ico_11_2.jpg" /></view>
+</view>

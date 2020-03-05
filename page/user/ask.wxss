@@ -1,0 +1,33 @@
+@import '../common/common.wxss';
+page{
+  padding-top: 20rpx;
+}
+.ask_1{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background: #ffffff;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+}
+.ask_1_1{
+  position: relative;
+  height: 106rpx;
+  line-height: 106rpx;
+  font-size: 28rpx;
+  color: #3a3a3a;
+}
+.ask_1_1 image{
+  position: absolute;
+  width: 23rpx;
+  height: 14rpx;
+  right: 28rpx;
+  top: 46rpx;
+}
+.ask_1_2{
+  line-height: 46rpx;
+  padding-bottom: 38rpx;
+  font-size: 24rpx;
+  color: #525252;
+}

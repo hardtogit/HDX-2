@@ -1,0 +1,21 @@
+<view class="con_search_top"></view>
+<view class="con_s1">
+  <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+  <input type="text" placeholder="搜索提货点" maxlength="20" bindinput="inpuText" />
+</view>
+<view class="con_s2">
+  <form bindsubmit="formHend" report-submit="true">
+  <view class="dl_1" wx:for="{{hendList}}" wx:key="">
+    <view class="dl_1L">
+      <view class="dl_1L1"><image src="/image/ico_2.png" />{{item.name}}</view>
+      <view class="dl_1L2">{{item.pro}}{{item.city}}{{item.area}}{{item.address}}</view>
+    </view>
+    <view class="dl_1R">
+      <view class="dl_1R1">{{item.distance}}km</view>
+      <view class="dl_1R2">进入</view>
+    </view>
+    <view class="clear"></view>
+    <button data-id="{{item.id}}" data-index="{{index}}" form-type="submit"></button>
+  </view>
+  </form>
+</view>

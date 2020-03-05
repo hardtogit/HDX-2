@@ -1,0 +1,30 @@
+<loading hidden="{{hidden}}">确认中...</loading>
+<view class="dl_3">
+    <view class="dl_3_L"><image src="{{goodsinf.img1}}" /></view>
+    <view class="dl_3_R">
+      <view class="dl_3_R1">{{goodsinf.title}}</view>
+      <view class="dl_3_R2">{{goodsinf.starttime}}</view>
+      <view class="dl_3_R3">
+        <view class="dl_3_R3_1">¥{{goodsinf.price0}}</view>
+      </view>
+    </view>
+</view>
+
+<view class="pcon_1">
+  <view class="pcon_1_1">小计</view>
+  <view class="pcon_1_2">¥{{goodsinf.price0}}</view>
+  <view class="pcon_1_3">×{{num}}</view>
+</view>
+<view class="pcon_1 top_15">
+  <view class="pcon_1_1">{{formInfo.name}}</view>
+  <view class="pcon_1_4">{{formInfo.tel}}</view>
+</view>
+<view class="pcon_2 top_15">退款说明</view>
+<view class="pcon_3">
+  由于本活动各项资源需提前采购，一经售出不接受退款，请确认后购买；本活动票款将用于活动资源的前期购买，预定后即具有排他性。
+</view>
+<view class="acon_bottom">
+  <view class="acon_bottom_L">合计：{{total}}元</view>
+  <view class="acon_bottom_R" wx:if="{{hidden}}" bindtap="bindPay">{{payname}}</view>
+  <view class="acon_bottom_R1" wx:else>确认中</view>
+</view>

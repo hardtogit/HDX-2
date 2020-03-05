@@ -1,0 +1,12 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="det_9" wx:for="{{disdata}}" wx:key="index">
+  <view class="det_9_1">
+    <view class="det_9_1L"><image src="{{item.uimg}}" />{{item.uname}}</view>
+    <view class="det_9_1R">{{item.time}}</view>
+  </view>
+  <view class="det_9_2">{{item.con}}</view>
+</view>
+<view class="foot_muen">
+  <view class="foot_muen1" bindtap="toHome"><image src="/image/home2.png"></image></view>
+  <view class="foot_muen2" bindtap="toUser"><image src="/image/user2.png"></image></view>
+</view>

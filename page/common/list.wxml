@@ -1,0 +1,26 @@
+<template name="list">
+  <form bindsubmit="formSubmit" report-submit="true">
+  <block wx:for="{{goods}}" wx:key="">
+    <view class="select-bottom" data-id="{{ item.id }}">
+      <view class="neirong_L"><image class='img' src="{{ item.img1 }}"></image></view>
+      <view class="neirong_R">
+        <view class="neirong_1">{{item.name}}</view>
+        <view class="neirong_2">{{item.spgg}}</view>
+        <view class="neirong_3">
+          <view class="neirong_3_1"><text decode="{{true}}">已售：{{item.soldNum}} &nbsp;&nbsp; 剩余：{{item.stock1}}</text></view>
+          <view class="neirong_3_2a">
+            <view class="neirong_3_2" wx:if="{{item.starttime==1}}">￥<text>{{item.price0}}</text>元</view>
+            <view class="neirong_3_2" wx:else>￥<text>?.??</text>元</view>
+            <view class="neirong_3_3">￥{{item.price}}元</view>
+          </view>
+        </view>
+        <view class="clear"></view>
+      </view>
+      <!-- <view wx:if="{{item.status=='0'}}" class="box-bg"><view class="bg-txt1">已售罄</view></view> -->
+      <view class="box_num"  wx:if="{{item.starttime==1}}" data-id='{{item.id}}' bindtap="addToCart">+</view>
+      <view class="box_num2"  wx:else>+</view>
+      <button data-id='{{item.id}}' data-index="{{index}}" form-type="submit"></button>
+    </view>
+  </block>
+  </form>
+</template>

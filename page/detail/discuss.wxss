@@ -1,0 +1,37 @@
+.det_9{
+  min-height: 154rpx;
+  border-bottom: 2rpx solid #e0e0e0;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.det_9_1{
+  height: 42rpx;
+  line-height: 42rpx;
+  margin-top: 38rpx;
+}
+.det_9_1L{
+  float: left;
+  position: relative;
+  height: 42rpx;
+  padding-left: 60rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.det_9_1L image{
+  position: absolute;
+  width: 42rpx;
+  height: 42rpx;
+  left: 0;
+  top: 0;
+  border-radius: 21rpx;
+}
+.det_9_1R{
+  float: right;
+  height: 42rpx;
+  color: #aeaeae;
+  font-size: 24rpx;
+}
+.det_9_2{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}

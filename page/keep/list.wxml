@@ -1,0 +1,15 @@
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="con_5">
+  <view class="dl_3" wx:for="{{favData}}" wx:key="">
+    <view class="dl_3_L" bindtap='toDetail' data-id="{{item.gid}}"><image src="{{item.img1}}" mode="aspectFit" /></view>
+    <view class="dl_3_R">
+      <view class="dl_3_R1" bindtap='toDetail' data-id="{{item.gid}}">{{item.name}}</view>
+      <view class="dl_3_R2">{{item.spgg}}</view>
+      <view class="dl_3_R3">
+        <view class="dl_3_R3_1">{{item.starttime}}</view>
+        <view class="dl_3_R3_2">¥{{item.price0}}</view>
+      </view>
+      <view class="dl_3_R4" bindtap='bindCancel' data-id="{{item.id}}" data-index="{{index}}"><view class="on">取消收藏</view></view>
+    </view>
+  </view>
+</view>

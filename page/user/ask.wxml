@@ -1,0 +1,12 @@
+<import src="../common/prompt.wxml"/>
+<loading hidden="{{hidden}}">加载中...</loading>
+<view class="ask_1" wx:for="{{askData}}" wx:key="">
+  <view class="ask_1_1" bindtap="selTitle" data-index="{{index}}">{{item.title}}<image wx:if="{{item.hid}}" src="/image/icon_top.png"></image><image wx:else src="/image/icon_down.png"></image></view>
+  <view class="ask_1_2" hidden='{{item.hid}}'>{{item.des}}</view>
+</view>
+<template is="prompt" data="{{prompt}}"/>
+
+<view class="foot_muen">
+  <view class="foot_muen1" bindtap="toHome"><image src="/image/home2.png"></image></view>
+  <view class="foot_muen2" bindtap="toUser"><image src="/image/user2.png"></image></view>
+</view>

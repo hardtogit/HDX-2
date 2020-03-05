@@ -1,0 +1,9 @@
+<view class="put_1">
+  <textarea class="detailText" 
+    placeholder="输入您的评论"
+    bindinput="bindTextAreaBlur"
+    value="{{des}}">
+</textarea>
+</view>
+<view class="put_2" bindtap='bindSave'>提交</view>
+<view class="put_3" bindtap='bindCancel'>取消</view>

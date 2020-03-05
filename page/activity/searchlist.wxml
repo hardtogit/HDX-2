@@ -1,0 +1,46 @@
+<import src="../common/prompt.wxml"/>
+<view class="con_1">
+  <view class="con_1_1" bindtap="bindAddress"><image src="/image/ico_2_1.png" />{{cityName}}</view>
+  <view class="con_1_2">
+    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+    <input type="text" placeholder="搜索精彩活动" value="{{name}}" bindinput="bindName"/>
+  </view>
+  <view class="con_1_3" bindtap="bindSearch">搜索</view>
+</view>
+<view class="se_1">
+  <view class="{{curIndex == 0?'on':''}}" bindtap='switchOn' data-index="0">活动<text></text></view>
+  <view class="{{curIndex == 1?'on':''}}" bindtap='switchOn' data-index="1">主办方<text></text></view>
+</view>
+<view class="se_2">
+  <view class="se_2_1" wx:if="{{curIndex==0}}">
+    <view class="dl_3" wx:for="{{goodsdata}}" wx:key="" bindtap='toDetail' data-id="{{item.id}}">
+    <view class="dl_3_L"><image src="{{item.img1}}" mode="aspectFit" /></view>
+    <view class="dl_3_R">
+      <view class="dl_3_R1"><text wx:if="{{item.tj==1}}">优选</text>{{item.name}}</view>
+      <view class="dl_3_R2">{{item.city}}</view>
+      <view class="dl_3_R3">
+        <view class="dl_3_R3_1">{{item.starttime}}</view>
+        <view class="dl_3_R3_2">¥{{item.price0}}</view>
+      </view>
+      <view class="dl_3_R4"><view class="on">查看详情</view></view>
+    </view>
+  </view>
+    <template is="prompt" data="{{prompt}}"/>
+  </view>
+  <view class="se_2_2" wx:else>
+    <view class="dl_5" wx:for="{{shopdata}}" wx:key="" bindtap='toFirm' data-id="{{item.id}}" data-name="{{item.name1}}">
+      <view class="dl_5_L"><image src="{{item.img}}" mode="widthFix" /></view>
+      <view class="dl_5_C">
+        <view class="dl_5_C1">{{item.name1}}</view>
+        <view class="dl_5_C2">{{item.des}}</view>
+        <view class="dl_5_C3">
+          <view class="det_7_1R_3_1"><image src="/image/ico_8.jpg" />粉丝</view>
+          <view class="det_7_1R_3_2">{{item.num1}}</view>
+          <view class="det_7_1R_3_3"><image src="/image/ico_9.jpg" />活动</view>
+          <view class="det_7_1R_3_2">{{item.num2}}</view>
+        </view>
+      </view>
+      <view class="dl_5_R"><view>详情</view></view>
+    </view>
+  </view>
+</view>
