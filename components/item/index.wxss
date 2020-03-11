@@ -1,0 +1,49 @@
+
+.cell {
+    display: flex;
+    padding: 20rpx 20rpx 20rpx 20rpx;
+    border-bottom: 1rpx solid #ebedf0;
+    background: #FFFFFF; }
+.cell__hd {
+    font-size: 0; }
+.cell__hd .image {
+    width: 150rpx;
+    height: 150rpx;
+    margin-right: 20rpx;
+    border-radius: 12rpx; }
+.cell__bd {
+    flex: 1; }
+.cell__rc {
+    width: 48rpx;
+}
+.cell__rc .close{
+    width: 32rpx;
+    height: 32rpx;
+    position: relative;
+    float: right;
+}
+.cell__rc .tip{
+    width: 34rpx;
+    height: 34rpx;
+    position: relative;
+    margin-top: 40rpx;
+    float: right;
+}
+.cell__bd .name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    word-break: break-all;
+    font-size: 32rpx;
+    margin-bottom: 4rpx; }
+.cell__bd .des {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    font-size: 32rpx;
+    line-height: 1.2;
+    word-break: break-all;
+    color: #333;
+     }

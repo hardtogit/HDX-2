@@ -231,7 +231,7 @@
   height: 50rpx;
   padding-left: 50rpx;
   padding-top: 18rpx;
-  padding-bottom: 50rpx;
+  padding-bottom: 20rpx;
 }
 .det_10 view{
   float: left;
@@ -244,6 +244,10 @@
   text-align: center;
   margin-left: 35rpx;
   margin-right: 35rpx;
+}
+.det_11 {
+  padding: 0 20rpx;
+  box-sizing: border-box;
 }
 .det_10_2{
   position: relative;
@@ -363,4 +367,7 @@
   background: #828282;
   background: -webkit-linear-gradient(left,#b0afaf,#828282);
   border-radius: 33rpx;
+}
+.page{
+  padding-bottom: 120rpx;
 }

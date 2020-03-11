@@ -1,0 +1,11 @@
+.template .img{
+    display: block;
+    width: 100%;
+    /*height: auto;*/
+    margin-top: 20rpx;
+}
+.template .text{
+    display: block;
+    margin-top: 20rpx;
+    font-size: 32rpx;
+}

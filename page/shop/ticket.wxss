@@ -1,0 +1,72 @@
+.item{
+    padding: 20rpx 0;
+    display: flex;
+    align-items: center;
+    border-top: 1rpx solid #dcdcdc;
+}
+.title{
+    font-size: 36rpx;
+}
+.item .image{
+    width: 42rpx;
+    height: 42rpx;
+    display: inline-block;
+    margin-right: 20rpx;
+}
+.header{
+    padding: 0rpx 20rpx;
+}
+.item .add-text{
+    font-size: 28rpx;
+    color: #1296db;
+}
+.item .text{
+    font-size: 28rpx;
+}
+.body{
+    margin-top: 20rpx;
+    box-sizing: border-box;
+    padding-left: 20rpx;
+}
+.body .sub-item {
+    display: flex;
+    padding: 20px 0  20rpx 0;
+}
+.body .sub-item .label{
+    flex: 1;
+    text-align: left;
+    font-size: 28rpx;
+}
+.body .sub-item .right{
+    text-align: right;
+}
+.body .sub-item .right .btn{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 2rpx 16rpx;
+    border-radius: 20rpx;
+    margin-right: 20rpx;
+    color: #ddd;
+}
+.body .sub-item .right .btn.active{
+    color: #333;
+    background-color: #f6f6f6;
+
+}
+.picker{
+    padding-right: 20rpx;
+}
+.picker .text{
+    color: #ddd;
+}
+.submit{
+    width: 710rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    border-radius: 36rpx;
+    margin: 40rpx auto;
+    text-align: center;
+    font-size: 28rpx;
+    color: #fff;
+    background-color: #1296db;
+}

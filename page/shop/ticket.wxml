@@ -1,0 +1,41 @@
+<view>
+    <view class="header">
+        <input class="item title" type="text" placeholder="请输入投票主题" value="{{title}}" bindinput="_titleChange"/>
+        <view class="item" wx:for="{{content}}" >
+            <image class="image" src="/image/delIcon.png" bindtap="_delItem"  data-index="{{item.key}}" wx:key="{{item.key}}"/>
+            <input  type="text" placeholder="选项{{index+1}}" value="{{item.value}}" bindinput="_inputChange" data-index="{{item.key}}"/>
+        </view>
+        <view class="item" bindtap="_addItem">
+            <image class="image" src="/image/addIcon.png"></image>
+            <view class="add-text">添加选项</view>
+        </view>
+    </view>
+    <view class="body">
+     <view class="sub-item">
+         <view class="label" >投票类型</view>
+         <view class="right">
+         <view class="btn {{type==2&&'active'}}" data-type="2" bindtap="_changeType">多选</view>
+         <view class="btn {{type==1&&'active'}}" data-type="1" bindtap="_changeType">单选</view>
+         </view>
+     </view>
+        <view class="sub-item">
+            <view class="label" >截止时间</view>
+            <view class="right">
+            <picker class="picker" mode="date" bindchange="_dateChange">
+            <view wx:if="{{date}}">
+                {{date}}
+            </view>
+                <view wx:if="{{!date}}" class="text">
+                    无截止时间
+                </view>
+            </picker>
+            </view>
+        </view>
+
+    </view>
+    <view class="submit" bindtap="_onsubmit">
+    完成
+    </view>
+
+
+</view>

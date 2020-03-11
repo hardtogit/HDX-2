@@ -1,0 +1,31 @@
+<view>
+	<view class="header">
+		<view class="title">编辑详情</view>
+		<view class="btn" bindtap="goPreview">预览</view>
+	</view>
+	<add addVisible="{{addVisible}}" bindaddEvent="onAddEvent" index="0" modalVisible="{{visibleArr[0]}}"></add>
+
+<view class="item-wrap" style="height: {{ itemWrapHeight }}px;">
+	<view wx:for="{{list}}"
+		  wx:key="id">
+	<view
+		class="item {{cur == index ? 'cur':''}} {{curZ == index ? 'zIndex':''}} {{itemTransition && index !== cur ? 'itemTransition':''}} {{item.fixed ? 'fixed' : ''}}"
+		data-key="{{item.sortKey}}"
+		data-index="{{index}}"
+		style="transform: translate3d({{index === cur ? tranX + 'px' : item.tranX}}, {{index === cur ? tranY + 'px' : item.tranY}}, 0);width: {{100 / columns}}%;z-index:{{list.length-item.sortKey}}"
+		bind:longpress="longPress"
+		catch:touchmove="{{dragging?'touchMove':''}}"
+		catch:touchend="{{dragging?'touchEnd':''}}">
+		<!-- start:请在该区域编写自己的渲染逻辑 -->
+		<contentItem dataSource="{{item}}" index="{{item.sortKey}}"></contentItem>
+		<!-- end:请在该区域编写自己的渲染逻辑 -->
+		<view class="addContainer">
+			<add index="{{index+1}}" addVisible="{{addVisible}}" modalVisible="{{visibleArr[index+1]}}"  bindaddEvent="onAddEvent"></add>
+		</view>
+
+	</view>
+
+	</view>
+
+</view>
+</view>

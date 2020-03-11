@@ -1,3 +1,4 @@
+<view class="page">
 <loading hidden="{{hidden}}">加载中...</loading>
 <view class="main_1">
   <view class="det_1">
@@ -57,9 +58,12 @@
   <view bindtap="binDis">我要评论</view>
   <view class="det_10_2">活动咨询<button open-type="contact" class="nav-custom" plain="true"></button></view>
 </view>
-<view class="det_8" bindtap="toInfo" data-id="{{goodsinf.id}}">活动详情<image src="/image/ico_5.jpg" /></view>
-<view class="det_11">{{goodsinf.des}}</view>
-<view class="det_12" bindtap="toInfo" data-id="{{goodsinf.id}}">查看更多<image src="/image/ico_6.jpg" /></view>
+<!--<view class="det_8" bindtap="toInfo" data-id="{{goodsinf.id}}">活动详情<image src="/image/ico_5.jpg" /></view>-->
+<!--<view class="det_11">{{goodsinf.des}}</view>-->
+<!--<view class="det_12" bindtap="toInfo" data-id="{{goodsinf.id}}">查看更多<image src="/image/ico_6.jpg" /></view>-->
+ <view class="det_11">
+   <preTemplate  dataSource="{{content}}"></preTemplate>
+ </view>
 <view class="fdgwc">
   <view class="fdgwc_1"  bindtap="toHome">
     <image src="/image/ico_4_1.png"></image>
@@ -90,4 +94,5 @@
     <view class="fdgwc_3_off" wx:if="{{goodsinf.status!=1}}"><view>失效</view></view>
     <view class="fdgwc_3" wx:elif="{{goodsinf.bm==0}}" bindtap="addBuy"><view>立即报名</view></view>
     <view class="fdgwc_3_off" wx:else><view>已报名</view></view>
+</view>
 </view>

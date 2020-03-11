@@ -219,7 +219,7 @@ Page({
   },
   toRelease(e){//活动详情
     wx.navigateTo({
-      url: 'release',
+      url: 'edit',
     })
   },
   bindMoney(e) {
@@ -330,8 +330,8 @@ Page({
       data: {
         scode: getApp().globalData.admin_shopcode,
         img: img,
-        title: encodeURI(info.title),
-        address: encodeURI(info.address),
+        title: info.title,
+        address: info.address,
         latitude: info.latitude,
         longitude: info.longitude,
         starttime: info.starttime,
@@ -340,11 +340,11 @@ Page({
         city: info.city,
         type: info.type,
         money: info.money,
-        con: encodeURI(con)
+        con: con
       },
-      method: 'GET',
+      method: 'POST',
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/x-www-form-urlencoded;charset=UTF-8'
       },
       success: function (res) {
         console.log(res.data);

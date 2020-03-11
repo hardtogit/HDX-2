@@ -3,6 +3,7 @@ var sUserKey = "";
 Page({
   data: {
     hidden: false,
+    content:[],
     goodsinf: {},//商品信息
     shopinfo: {},//主办方信息
     disdata:{},//评论列表
@@ -13,7 +14,7 @@ Page({
     return {
       title: goodsinf.title,
       desc: goodsinf.title,
-      path: '/pages/details/details?id=' + goodsinf.id,
+      path: '/page/detail/detail?id=' + goodsinf.id,
       success: function (res) {
       }
     }
@@ -41,9 +42,15 @@ Page({
       },
       success: function (res) {
         var resData = JSON.parse(decodeURIComponent(JSON.stringify(res.data)));
-        console.log(resData);
+        let content=[]
+        try {
+             content=JSON.parse(resData.goodsinfo.content)
+        }catch (e) {
+            content=[]
+        }
         slet.setData({
           goodsinf: resData.goodsinfo,
+            content:content,
           shopinfo: resData.shopinfo
         })
       },

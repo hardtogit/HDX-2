@@ -30,8 +30,11 @@
     "page/shop/order1",
     "page/shop/release",
     "page/shop/orderinfo",
-    "page/shop/add"
-    
+    "page/shop/add",
+    "page/shop/edit",
+    "page/shop/textarea",
+    "page/shop/ticket",
+    "page/shop/preview"
   ],
   "window": {
     "navigationBarTextStyle": "white",

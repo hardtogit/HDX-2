@@ -32,9 +32,41 @@
 			"current": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"plugin": {
 			"current": -1,
 			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "page/shop/edit",
+					"pathName": "page/shop/edit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "page/shop/ticket",
+					"pathName": "page/shop/ticket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "page/shop/add",
+					"pathName": "page/shop/add",
+					"scene": null
+				}
+			]
 		}
 	}
 }

@@ -1,0 +1,10 @@
+<view>
+    <view class="header">
+        <view class="title">预览</view>
+        <view class="btn" bindtap="_handleSubmit">完成</view>
+    </view>
+    <view class="pre-container">
+        <preTemplate dataSource="{{listData}}"></preTemplate>
+    </view>
+
+</view>

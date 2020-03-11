@@ -1,0 +1,27 @@
+<view class="add-container" >
+    <view  wx:if="{{addVisible}}">
+   <image class="add-icon"  src="/image/add.png" bindtap="_targetVisible"></image>
+    <view wx:if="{{modalVisible}}" class="pop">
+        <view class="items">
+            <view class="item" bindtap="_addPicture">
+                <image class="img" src="/image/picture.png" ></image>
+                <view class="text">图片</view>
+            </view>
+            <view class="item" bindtap="_goTextArea">
+                <image class="img" src="/image/text.png"></image>
+                <view class="text">文字</view>
+            </view>
+            <view class="item" bindtap="_addVideo">
+                <image class="img" src="/image/video.png"></image>
+                <view class="text">视频</view>
+            </view>
+            <!--<view class="item" bindtap="_goTicket">-->
+                <!--<image class="img" src="/image/ticke.png"></image>-->
+                <!--<view class="text">投票</view>-->
+            <!--</view>-->
+        </view>
+    </view>
+        <view class="arrow" wx:if="{{modalVisible}}">
+        </view>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="template">
+    <view wx:for="{{dataSource}}" wx:key="index">
+      <view wx:if="{{item.type==='text'||item.type==='image'}}">
+        <image wx:if="{{item.images}}" class="img" mode="widthFix"  src="{{item.images}}"></image>
+        <view class="text">{{item.description}}</view>
+      </view>
+      <view wx:if="{{item.type==='video'}}">
+         <video wx:if="{{item.images}}" object-fit="cover" class="img" src="{{item.images}}"></video>
+         <view class="text">{{item.description}}</view>
+      </view>
+    </view>
+
+</view>
+

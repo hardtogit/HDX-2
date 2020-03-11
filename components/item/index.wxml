@@ -1,0 +1,24 @@
+<view>
+        <view class="cell" wx:if="{{dataSource.data.type==='ticket'}}">
+            <view class="cell__hd">
+                <image  class="image" mode="aspectFill" src="{{'/image/ticket.png'}}" alt=""/>
+            </view>
+            <view class="cell__bd" >
+                <view class="name">{{dataSource.data.params.title}}</view>
+            </view>
+        </view>
+        <view class="cell" wx:if="{{dataSource.data.type!=='ticket'}}">
+        <view class="cell__hd">
+            <image wx:if="{{dataSource.data.type==='text'||dataSource.data.type==='image'}}" bindtap="goPicture" class="image" mode="aspectFill" src="{{dataSource.data.images||'/image/addImg.png'}}" alt=""/>
+            <video wx:if="{{dataSource.data.type==='video'}}" controls="{{false}}" show-fullscreen-btn="{{false}}" object-fit="cover"  class="image" mode="aspectFill" src="{{dataSource.data.images}}" alt=""/>
+        </view>
+        <view class="cell__bd" bindtap="goTextArea">
+            <view class="des">{{dataSource.data.description||'点击添加文字'}}</view>
+        </view>
+        <view class="cell__rc" >
+            <image bindtap="_deleteTip" class="close" src="/image/close.png"></image>
+            <image bindtap="_tipTap" class="tip" src="/image/tip.png"></image>
+        </view>
+        </view>
+</view>
+

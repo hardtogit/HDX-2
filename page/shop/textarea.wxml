@@ -1,0 +1,4 @@
+<view>
+    <textarea value="{{content}}" name="" class="text-area" maxlength="5000" bindinput="handleInput"></textarea>
+    <view class="btn" bindtap="handleClick">完成</view>
+</view>

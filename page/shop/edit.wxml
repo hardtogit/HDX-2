@@ -1,0 +1,14 @@
+<drag id="drag"
+      bind:click="itemClick"
+      bind:change="change"
+      bind:sortend="sortEnd"
+      bind:scroll="scroll"
+      list-data="{{listData}}"
+      columns="1"
+      scroll-top="{{scrollTop}}"
+      top-size="110"
+      bottom-size="{{isIphoneX ? 380 : 300 }}">
+    <view slot="plus" class="plus-wrap" bindtap="add">
+        <view class="plus"></view>
+    </view>
+</drag>

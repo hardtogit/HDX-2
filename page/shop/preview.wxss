@@ -1,0 +1,29 @@
+.header{
+    height: 80rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 0 20rpx;
+    line-height: 80rpx;
+    display: flex;
+}
+.header .title{
+    flex: 1;
+    font-size: 32rpx;
+}
+.header .btn{
+    width: 120rpx;
+    height: 48rpx;
+    border-radius: 24rpx;
+    font-size: 28rpx;
+    text-align: center;
+    color: #fff;
+    line-height: 48rpx;
+    background-color: #1296db;
+    float: right;
+    margin:20rpx 0 0 0;
+}
+.pre-container{
+    box-sizing: border-box;
+    padding: 20rpx;
+    font-size: 32rpx;
+}

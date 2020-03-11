@@ -1,0 +1,7 @@
+{
+	"component": true,
+	"usingComponents": {
+		"add": "../add",
+		"contentItem":"../item"
+	}
+}
